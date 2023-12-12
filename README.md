@@ -1,3 +1,7 @@
+## Live Demo
+**You can see the `React Tic Tac Toe App` Live On:** [Here](https://natitictac.netlify.app)
+
+
 
 # React Tic-tac-toe Game
 
@@ -22,7 +26,15 @@ To run the React-TicTacToe app locally, use the following command:
 ```bash
 npm start
 ```
+Access the game in your browser by visiting `http://localhost:3000`.
 
-## Live Demo
-**You can see the `React Tic Tac Toe App` Live On:** [Here](https://natitictac.netlify.app)
+## Contributing
 
+Contributions are welcome! If you'd like to improve the game or add new features, feel free to submit a pull request.
+
+
+## Contact
+
+For any inquiries or feedback, feel free to contact [netanelkozel@gmail.com](mailto:netanelkozel@gmail.com).
+
+Enjoy playing Tic-tac-toe!
