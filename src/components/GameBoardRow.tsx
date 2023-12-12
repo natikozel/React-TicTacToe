@@ -1,10 +1,10 @@
 import React from "react";
 import {GameBoardCell} from "./GameBoardCell";
-import {GameBoardArrayProps} from "./GameBoardArray";
+import {GameBoardProps} from "./GameBoard";
 
 export interface GameBoardRowProps {
     rowIndex: number;
-    GameBoardArrayProps: GameBoardArrayProps;
+    GameBoardProps?: GameBoardProps;
 }
 
 

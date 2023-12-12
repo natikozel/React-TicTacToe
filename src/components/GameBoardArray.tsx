@@ -1,21 +1,16 @@
 import React from "react";
 import {GameBoardRow} from "./GameBoardRow";
-import {PlayerSymbol} from "./Container";
-
-export interface GameBoardArrayProps {
-    onSelect?: Function,
-    curPlayer: PlayerSymbol
-}
+import {GameBoardProps} from "./GameBoard";
 
 
-export const GameBoardArray = ({...GameBoardArrayProps}: GameBoardArrayProps): React.JSX.Element => {
+export const GameBoardArray = ({...GameBoardProps}: GameBoardProps): React.JSX.Element => {
 
 
     return (
         <ol>
-            <GameBoardRow GameBoardArrayProps={GameBoardArrayProps} rowIndex={1}/>
-            <GameBoardRow GameBoardArrayProps={GameBoardArrayProps} rowIndex={2}/>
-            <GameBoardRow GameBoardArrayProps={GameBoardArrayProps} rowIndex={3}/>
+            <GameBoardRow GameBoardProps={GameBoardProps} rowIndex={1}/>
+            <GameBoardRow GameBoardProps={GameBoardProps} rowIndex={2}/>
+            <GameBoardRow GameBoardProps={GameBoardProps} rowIndex={3}/>
         </ol>
     );
 };

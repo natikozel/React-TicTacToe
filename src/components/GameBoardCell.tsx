@@ -7,20 +7,20 @@ export interface CellProps {
     colIndex: number,
 }
 
-export const GameBoardCell = ({...CellProps} : CellProps): React.JSX.Element => {
+export const GameBoardCell = ({GameBoardRowProps, colIndex}: CellProps): React.JSX.Element => {
     const [cell, setCell]
         : [PlayerSymbol, React.Dispatch<React.SetStateAction<PlayerSymbol>>]
         = useState(null as unknown as PlayerSymbol);
 
 
     const elementClickHandler = (): void => {
-        setCell((prevCell: PlayerSymbol): PlayerSymbol => CellProps.GameBoardRowProps.GameBoardArrayProps.curPlayer);
-        CellProps.GameBoardRowProps.GameBoardArrayProps.onSelect!();
+        setCell((prevCell: PlayerSymbol): PlayerSymbol => GameBoardRowProps.GameBoardProps!.curPlayer.symbol);
+        GameBoardRowProps.GameBoardProps!.onSelect!(GameBoardRowProps.rowIndex, colIndex);
 
     };
 
     return (
-        <li key={`${CellProps.GameBoardRowProps.rowIndex}${CellProps.colIndex}`}>
+        <li key={`${GameBoardRowProps.rowIndex}${colIndex}`}>
             <button onClick={elementClickHandler}>{cell}</button>
         </li>
     );
