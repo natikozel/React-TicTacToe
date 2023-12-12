@@ -15,7 +15,6 @@ export const GameBoardRow = ({...GameBoardRowProps}: GameBoardRowProps): React.J
             <GameBoardCell GameBoardRowProps={GameBoardRowProps} colIndex={1}/>
             <GameBoardCell GameBoardRowProps={GameBoardRowProps} colIndex={2}/>
             <GameBoardCell GameBoardRowProps={GameBoardRowProps} colIndex={3}/>
-
         </ol>
     );
 };
