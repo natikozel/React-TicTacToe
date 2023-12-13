@@ -7,11 +7,12 @@
 
 This repository contains a simple yet efficient Tic-tac-toe game built using React. The application is structured with components handling different aspects of React, promoting clean and organized code.
 
-## Features
+## Key Features
 
 - **React Components**: The game logic is divided into small, reusable, and mostly pure React components, enhancing maintainability and readability.
 - **Precise Data Management**: Careful handling of components' data ensures as few renders as possible, smooth gameplay and optimal performance.
 - **Simple Interface**: The user interface is intuitive, providing a seamless gaming experience for everyone.
+- **TypeScript Implementation**: The entire project is built using TypeScript, leveraging its type safety and enhanced code maintenance benefits.
 
 ## Installation
 
