@@ -4,7 +4,7 @@ import {GameBoardProps} from "./GameBoard";
 
 export interface GameBoardRowProps {
     rowIndex: number;
-    GameBoardProps?: GameBoardProps;
+    GameBoardProps: GameBoardProps;
 }
 
 

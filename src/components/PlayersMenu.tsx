@@ -1,19 +1,18 @@
-import {Player, PlayerProps} from "./Player";
+import {Player} from "./Player";
 import React from "react";
+import {PlayerSymbol} from "./Container";
 
 export interface PlayersMenuProps {
-    allPlayers: Array<PlayerProps>
-    updateAllPlayers: Function
+    currentPlayer: PlayerSymbol
 }
 
-export const PlayersMenu = ({allPlayers, updateAllPlayers}: PlayersMenuProps): React.JSX.Element => {
+export const PlayersMenu = ({currentPlayer}: PlayersMenuProps): React.JSX.Element => {
 
 
     return (
         <ol className="highlight-player" id="players">
-            {allPlayers.map((player: PlayerProps, index: number) =>
-                <Player key={index} updateAllPlayers={updateAllPlayers} {...player}/>
-            )}
+            <Player isActive={currentPlayer === 'X'} name="PLAYER1" symbol="X"/>
+            <Player isActive={currentPlayer === 'O'} name="PLAYER2" symbol="O"/>
         </ol>);
 };
 

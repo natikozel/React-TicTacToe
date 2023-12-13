@@ -12,7 +12,7 @@ export const Log = ({gameTurns}: LogProps): React.JSX.Element => {
         <ol id="log">
             {gameTurns.map((turn: Turn, index: number) =>
                 <li key={index}>
-                    {`Player ${turn.player.name} ticks ${turn.player.symbol} in row ${turn.square.rowIndex} and column ${turn.square.colIndex}`}
+                    {`${turn.player} selected ${turn.square.rowIndex},${turn.square.colIndex}`}
                 </li>)
             }
         </ol>

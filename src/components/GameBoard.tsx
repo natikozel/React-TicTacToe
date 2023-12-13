@@ -1,17 +1,17 @@
 import React from "react";
 import {GameBoardArray} from "./GameBoardArray";
-import {PlayerProps} from "./Player";
+import {PlayerSymbol} from "./Container";
 
 export interface GameBoardProps {
-    curPlayer: PlayerProps,
+    currentPlayer: PlayerSymbol,
     onSelect: Function
 }
 
-export const GameBoard = ({curPlayer, onSelect} : GameBoardProps) => {
+export const GameBoard = ({currentPlayer, onSelect} : GameBoardProps) => {
 
     return (
         <ol id="game-board">
-            <GameBoardArray onSelect={onSelect} curPlayer={curPlayer}/>
+            <GameBoardArray onSelect={onSelect} currentPlayer={currentPlayer}/>
         </ol>
     );
 };

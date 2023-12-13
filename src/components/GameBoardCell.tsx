@@ -14,7 +14,7 @@ export const GameBoardCell = ({GameBoardRowProps, colIndex}: CellProps): React.J
 
 
     const elementClickHandler = (): void => {
-        setCell((prevCell: PlayerSymbol): PlayerSymbol => GameBoardRowProps.GameBoardProps!.curPlayer.symbol);
+        setCell((prevCell: PlayerSymbol): PlayerSymbol => GameBoardRowProps.GameBoardProps!.currentPlayer);
         GameBoardRowProps.GameBoardProps!.onSelect!(GameBoardRowProps.rowIndex, colIndex);
 
     };
