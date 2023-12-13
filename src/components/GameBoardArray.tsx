@@ -8,9 +8,9 @@ export const GameBoardArray = ({...GameBoardProps}: GameBoardProps): React.JSX.E
 
     return (
         <ol>
+            <GameBoardRow GameBoardProps={GameBoardProps} rowIndex={0}/>
             <GameBoardRow GameBoardProps={GameBoardProps} rowIndex={1}/>
             <GameBoardRow GameBoardProps={GameBoardProps} rowIndex={2}/>
-            <GameBoardRow GameBoardProps={GameBoardProps} rowIndex={3}/>
         </ol>
     );
 };

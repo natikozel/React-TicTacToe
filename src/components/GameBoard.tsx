@@ -3,15 +3,15 @@ import {GameBoardArray} from "./GameBoardArray";
 import {PlayerSymbol} from "./Container";
 
 export interface GameBoardProps {
-    currentPlayer: PlayerSymbol,
-    onSelect: Function
+    gameBoard: PlayerSymbol[][],
+    onSelect: Function,
 }
 
-export const GameBoard = ({currentPlayer, onSelect} : GameBoardProps) => {
+export const GameBoard = ({gameBoard, onSelect} : GameBoardProps) => {
 
     return (
         <ol id="game-board">
-            <GameBoardArray onSelect={onSelect} currentPlayer={currentPlayer}/>
+            <GameBoardArray onSelect={onSelect} gameBoard={gameBoard}/>
         </ol>
     );
 };

@@ -4,17 +4,21 @@ import {PlayerSymbol} from "./Container";
 export interface PlayerProps {
     readonly symbol: PlayerSymbol
     name: string,
-    isActive: boolean
+    isActive: boolean,
+    onSave: Function,
 }
 
 
-export const Player = ({name, symbol, isActive}: PlayerProps): React.JSX.Element => {
+export const Player = ({name, symbol, isActive, onSave}: PlayerProps): React.JSX.Element => {
 
     const [edit, setEdit]: [boolean, React.Dispatch<React.SetStateAction<boolean>>] = useState(false);
     const [playerName, setPlayerName]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("");
 
     const handleEdit = (): void => {
         setEdit((prevEdit: boolean): boolean => !prevEdit);
+
+        if (edit)
+            onSave(symbol, playerName);
 
     };
 

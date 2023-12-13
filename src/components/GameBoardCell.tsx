@@ -1,5 +1,4 @@
-import {PlayerSymbol} from "./Container";
-import React, {useState} from "react";
+import React from "react";
 import {GameBoardRowProps} from "./GameBoardRow";
 
 export interface CellProps {
@@ -8,20 +7,18 @@ export interface CellProps {
 }
 
 export const GameBoardCell = ({GameBoardRowProps, colIndex}: CellProps): React.JSX.Element => {
-    const [cell, setCell]
-        : [PlayerSymbol, React.Dispatch<React.SetStateAction<PlayerSymbol>>]
-        = useState(null as unknown as PlayerSymbol);
 
+    const row: number = GameBoardRowProps.rowIndex;
 
-    const elementClickHandler = (): void => {
-        setCell((prevCell: PlayerSymbol): PlayerSymbol => GameBoardRowProps.GameBoardProps!.currentPlayer);
+    const elementClickHandler = (e: any): void => {
         GameBoardRowProps.GameBoardProps!.onSelect!(GameBoardRowProps.rowIndex, colIndex);
-
     };
+
 
     return (
         <li key={`${GameBoardRowProps.rowIndex}${colIndex}`}>
-            <button onClick={elementClickHandler}>{cell}</button>
+            <button onClick={elementClickHandler}
+                    disabled={!!GameBoardRowProps.GameBoardProps.gameBoard[row][colIndex]}>{GameBoardRowProps.GameBoardProps.gameBoard[row][colIndex]}</button>
         </li>
     );
 };
